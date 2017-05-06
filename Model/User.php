@@ -8,15 +8,12 @@
 
 namespace Miky\Component\User\Model;
 
-use Miky\Component\Core\Model\CommonModelInterface;
-use Miky\Component\Core\Model\CommonModelTrait;
 use Miky\Component\Media\Model\Media;
-use FOS\UserBundle\Entity\User as BaseUser;
 
-class User extends BaseUser implements CommonModelInterface
+
+class User extends BaseUser
 {
 
-    Use CommonModelTrait;
 
     /**
      * @var Media

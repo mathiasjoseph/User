@@ -17,11 +17,6 @@ trait UserTypeTrait
     protected $customer;
 
     /**
-     * @var Administrator
-     */
-    protected $administator;
-
-    /**
      * @var Employee
      */
     protected $employee;
@@ -47,21 +42,7 @@ trait UserTypeTrait
         $this->customer = $customer;
     }
 
-    /**
-     * @return Administrator
-     */
-    public function getAdministator()
-    {
-        return $this->administator;
-    }
 
-    /**
-     * @param Administrator $administator
-     */
-    public function setAdministator($administator)
-    {
-        $this->administator = $administator;
-    }
 
     /**
      * @return Employee

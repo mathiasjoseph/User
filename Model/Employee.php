@@ -8,7 +8,7 @@
 
 namespace Miky\Component\User\Model;
 
-class Employee extends User  implements EmployeeInterface
+class Employee extends BaseUser  implements EmployeeInterface
 {
 
 }
