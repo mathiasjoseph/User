@@ -14,7 +14,6 @@ use Miky\Component\Media\Model\Media;
 class User extends BaseUser
 {
 
-
     /**
      * @var Media
      */
