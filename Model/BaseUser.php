@@ -14,6 +14,10 @@ use Miky\Component\Core\Model\CommonModelTrait;
 
 class BaseUser extends \FOS\UserBundle\Model\User implements CommonModelInterface
 {
+    const GENDER_FEMALE = "f";
+
+    const GENDER_MALE = "m";
+
     Use CommonModelTrait;
 
     /**
@@ -25,6 +29,18 @@ class BaseUser extends \FOS\UserBundle\Model\User implements CommonModelInterfac
      * @var string
      */
     protected $firstname;
+
+    /**
+     * @var \DateTime
+     */
+    protected $dateOfBirth;
+
+    /**
+     * @var string
+     */
+    protected $gender;
+
+
 
     /**
      * @return string
@@ -56,5 +72,37 @@ class BaseUser extends \FOS\UserBundle\Model\User implements CommonModelInterfac
     public function setFirstname($firstname)
     {
         $this->firstname = $firstname;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateOfBirth()
+    {
+        return $this->dateOfBirth;
+    }
+
+    /**
+     * @param \DateTime $dateOfBirth
+     */
+    public function setDateOfBirth($dateOfBirth)
+    {
+        $this->dateOfBirth = $dateOfBirth;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param string $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
     }
 }
