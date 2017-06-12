@@ -11,7 +11,7 @@ namespace Miky\Component\User\Model;
 use Miky\Component\Media\Model\Media;
 
 
-class User extends BaseUser
+class User extends BaseUser implements UserInterface
 {
 
     /**
