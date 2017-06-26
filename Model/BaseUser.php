@@ -40,6 +40,11 @@ class BaseUser extends \FOS\UserBundle\Model\User implements CommonModelInterfac
      */
     protected $gender;
 
+    /**
+     * @var string
+     */
+    protected $type;
+
 
 
     /**
@@ -104,5 +109,21 @@ class BaseUser extends \FOS\UserBundle\Model\User implements CommonModelInterfac
     public function setGender($gender)
     {
         $this->gender = $gender;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
 }
