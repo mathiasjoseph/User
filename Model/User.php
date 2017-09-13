@@ -9,8 +9,12 @@
 namespace Miky\Component\User\Model;
 
 use Miky\Component\Media\Model\Media;
-
-
+use JMS\Serializer\Annotation\ExclusionPolicy;
+/**
+ * Class User
+ * @package Miky\Component\User\Model
+ * @ExclusionPolicy("all")
+ */
 class User extends BaseUser implements UserInterface
 {
 
@@ -58,6 +62,12 @@ class User extends BaseUser implements UserInterface
      * @var string
      */
     protected $twitterUrl;
+
+    /**
+     * @var string
+     */
+    protected $website;
+
 
     /**
      * User constructor.
@@ -212,6 +222,23 @@ class User extends BaseUser implements UserInterface
     {
         $this->cellPhone = $cellPhone;
     }
+
+    /**
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->website;
+    }
+
+    /**
+     * @param string $website
+     */
+    public function setWebsite($website)
+    {
+        $this->website = $website;
+    }
+
 
 
 }
